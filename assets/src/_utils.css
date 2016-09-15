@@ -64,15 +64,14 @@
 	bottom: 2rem;
 	color: #fff;
 	position: absolute;
+	white-space: initial;
+	font-size: 1rem;
+	line-height: 1.5;
 }
 
 .cta-text {
 	z-index: 1;
-	max-width: 60%;
-}
-
-.gallery-cell {
-	height: auto;
+	max-width: 80%;
 }
 
 .arch-grad-overlay:after {
@@ -83,4 +82,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+}
+
+.arch .flag-body > header + * {
+	padding-top: 0;
 }

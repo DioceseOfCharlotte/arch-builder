@@ -1,0 +1,206 @@
+
+.striped>tbody>:nth-child(even) {
+	background-color: #FAFBFC;
+}
+
+.striped>tbody>:nth-child(odd) {
+    background-color: #F3F6F8;
+}
+
+.striped>tbody>:nth-child(even).level-0 {
+    background-color: #ffffff;
+}
+
+.striped>tbody>:nth-child(odd).level-0 {
+    background-color: #F9FBFC;
+}
+
+.arch-has-children {
+	box-shadow: 0 0 0 1px rgba(30, 45, 55, 0.15),0 2px 3px rgba(30, 45, 55, 0.2);
+	transform: scale(1.005, 1);
+	background-color: #fff !important;
+	opacity: 1;
+}
+
+.arch-has-children > th.check-column {
+    border-left: 2px solid #2e4453;
+}
+
+.arch-has-children .featured_image.column-featured_image {
+	padding: 0;
+	margin: 0;
+}
+
+.arch-has-children .featured_image > .wp-post-image {
+	padding: 0;
+	margin: 0;
+}
+
+td.featured_image.column-featured_image {
+	text-align: right;
+}
+
+.row-actions {
+	min-width: 200px;
+}
+
+.arch-has-children + tr > td {
+	padding-top: 1rem;
+}
+
+.arch-has-children + tr > th {
+	padding-top: 1rem !important;
+}
+
+.arch-has-children.level-0 {
+	transform: scale(1.02, 1);
+}
+
+.arch-has-children.level-1 {
+	transform: scale(1.01, 1);
+}
+.arch-has-children.level-2 {
+	transform: scale(1.005, 1);
+}
+
+table.wp-list-table tr * {
+	transition-duration: .2s;
+	transition-timing-function: cubic-bezier(.4,0,.2,1);
+	transition-property: opacity;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.level-1:not(.arch-has-children):not(:hover) *,
+.level-2:not(.arch-has-children):not(:hover) *,
+.level-3:not(.arch-has-children):not(:hover) * {
+	opacity: 0.9;
+}
+
+.level-1:not(.arch-has-children) .featured_image > .wp-post-image,
+.level-2:not(.arch-has-children) .featured_image > .wp-post-image,
+.level-3:not(.arch-has-children) .featured_image > .wp-post-image {
+	max-width: 70px;
+}
+
+.bb-codeblock {
+	font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	direction: ltr;
+	unicode-bidi: embed;
+	background-color: #32373c;
+	color: rgba(240, 245, 250, 0.7);
+	font-size: 0.9rem;
+	padding: 15px;
+	white-space: pre;
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
+	border: 0;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	position: relative;
+	line-height: 1.5;
+}
+
+.bb-codeblock:focus {
+	background-color: #23282d;
+	color: rgba(240, 245, 250, 0.8);
+}
+
+.butterbean-manager-default .butterbean-control.butterbean-control-radio-image {
+	margin-bottom: 2rem;
+}
+
+.butterbean-manager-default .butterbean-description {
+	margin-bottom: 1rem !important;
+	opacity: .9;
+}
+
+#butterbean-control-arch_bg_color label {
+	display: inline-block;
+	width: 100%;
+	max-width: 23%;
+	padding-top: 5px;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+#butterbean-control-arch_bg_color .butterbean-palette-block {
+	border-radius: 3px;
+	overflow: hidden;
+}
+
+#butterbean-control-arch_bg_color label:hover {
+	background-color: #ddd;
+}
+
+.butterbean-checkbox-list,
+.butterbean-radio-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.butterbean-checkbox-list > li,
+.butterbean-radio-list > li {
+	margin-right: 1rem;
+}
+
+.butterbean-control-radio-image img {
+	border-radius: 3px;
+	opacity: 0.5;
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+
+.butterbean-control-radio-image label {
+	display: inline-flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	margin: 0 1em;
+}
+
+.butterbean-control-radio-image .screen-reader-text {
+	width: auto !important;
+	height: auto !important;
+	position: static !important;
+	padding-top: .25em !important;
+	font-style: italic;
+	color: #666666;
+}
+
+.butterbean-control-radio-image input:checked + span {
+	color: #444444;
+}
+
+.butterbean-control-radio-image input:checked + span + img {
+	opacity: 1;
+}
+
+.arch-video-embed {
+	max-width: 600px;
+}
+
+.FlexEmbed {
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+
+.FlexEmbed-ratio {
+	display: block;
+	padding-bottom: 100%;
+	width: 100%;
+}
+
+.FlexEmbed-ratio--16by9 {
+	padding-bottom: 56.25%;
+}
+
+.FlexEmbed > iframe {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}

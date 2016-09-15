@@ -1,6 +1,10 @@
 
-@import "flickity";
+@import "slides";
 @import "grid";
 @import "tabs";
 @import "accordion";
 @import "utils";
+
+.row-wide > * {
+    margin: 0;
+}

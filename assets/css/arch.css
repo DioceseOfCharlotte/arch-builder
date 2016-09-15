@@ -1,107 +1,61 @@
-/*! Flickity v1.2.1
-http://flickity.metafizzy.co
----------------------------------------------- */
+/**
+* Slider specific styles
+*/
 
-.flickity-enabled {
+.frame {
     position: relative;
-}
-
-.flickity-enabled:focus {
-    outline: none;
-}
-
-.flickity-viewport {
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
     overflow: hidden;
+    white-space: nowrap;
+}
+
+.slide-cell {
     position: relative;
-    height: 100%;
+    display: inline-block;
 }
 
-.flickity-slider {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.arch-slides {
+    position: relative;
 }
 
-/* draggable */
-
-.flickity-enabled.is-draggable {
-    -webkit-tap-highlight-color: transparent;
-    tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.arch-slides .slides {
+    display: block;
 }
 
-.flickity-enabled.is-draggable .flickity-viewport {
-    cursor: move;
-    cursor: -webkit-grab;
-    cursor: grab;
+.arch-slides a:not(.btn) {
+    color: inherit;
+    width: auto;
+    font-weight: bold;
 }
 
-.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
-    cursor: -webkit-grabbing;
-    cursor: grabbing;
-}
-
-/* ---- previous/next buttons ---- */
-
-.flickity-prev-next-button {
+.slide-btn {
     position: absolute;
     top: 50%;
-    width: 44px;
-    height: 44px;
-    border: none;
-    border-radius: 50%;
-    background: white;
-    background: hsla(0, 0%, 100%, 0.75);
-    cursor: pointer;
-    /* vertically center */
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+    background: #fff;
+    background: rgba(255, 255, 255, .85);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14),
+                0 1px 10px 0 rgba(0, 0, 0, .12),
+                0 2px 4px -1px rgba(0, 0, 0, .2);
+    cursor: pointer;
 }
 
-.flickity-prev-next-button:hover {
-    background: white;
+.slide-btn.next {
+    right: .5em;
 }
 
-.flickity-prev-next-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 5px #09F;
+.slide-btn.prev {
+    left: .5em;
 }
 
-.flickity-prev-next-button:active {
-    filter: alpha(opacity=60); /* IE8 */
-    opacity: 0.6;
-}
-
-.flickity-prev-next-button.previous {
-    left: 10px;
-}
-
-.flickity-prev-next-button.next {
-    right: 10px;
-}
-
-/* right to left */
-
-.flickity-rtl .flickity-prev-next-button.previous {
-    left: auto;
-    right: 10px;
-}
-
-.flickity-rtl .flickity-prev-next-button.next {
-    right: auto;
-    left: 10px;
-}
-
-.flickity-prev-next-button:disabled {
-    filter: alpha(opacity=30); /* IE8 */
-    opacity: 0.3;
-    cursor: auto;
-}
-
-.flickity-prev-next-button svg {
+.slide-btn > svg {
     position: absolute;
     left: 20%;
     top: 20%;
@@ -109,52 +63,14 @@ http://flickity.metafizzy.co
     height: 60%;
 }
 
-.flickity-prev-next-button .arrow {
-    fill: #333;
+@media screen and (max-width: 47em) {
+    .slides .entry-summary {
+        display: none;
+        visibility: hidden;
+    }
 }
 
-/* color & size if no SVG - IE8 and Android 2.3 */
-
-.flickity-prev-next-button.no-svg {
-    color: #333;
-    font-size: 26px;
-}
-
-/* ---- page dots ---- */
-
-.flickity-page-dots {
-    position: absolute;
-    width: 100%;
-    bottom: -25px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    text-align: center;
-    line-height: 1;
-}
-
-.flickity-rtl .flickity-page-dots {
-    direction: rtl;
-}
-
-.flickity-page-dots .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 8px;
-    background: #333;
-    border-radius: 50%;
-    filter: alpha(opacity=25); /* IE8 */
-    opacity: 0.25;
-    cursor: pointer;
-}
-
-.flickity-page-dots .dot.is-selected {
-    filter: alpha(opacity=100); /* IE8 */
-    opacity: 1;
-}
-
-.site-main, .o-grid {
+.site-main, .arch-row, .o-grid {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -173,66 +89,60 @@ http://flickity.metafizzy.co
     width: 100%;
 }
 
-.arch .arch-u-1of1 {
+.arch.arch .arch-u-1of1 {
     width: 100%;
+    max-width: 100%;
 }
 
 @media screen and (min-width: 48em) {
-    .arch .arch-u-1of1-md {
+    .arch.arch .arch-u-1of1-md {
         width: 100%;
+        max-width: 100%;
     }
 
     .arch .arch-u-1of2-md {
         width: calc(50% - 1.5rem);
-    }
-
-    .arch .arch-u-1of2-md:last-of-type {
         max-width: calc(50% - 1.5rem);
     }
 
     .arch .arch-u-1of3-md {
         width: calc(33.33% - 1.5rem);
-    }
-
-    .arch .arch-u-1of3-md:last-of-type, .arch .arch-u-1of3-md:nth-last-child(2) {
         max-width: calc(33.33% - 1.5rem);
     }
 
     .arch .arch-u-2of3-md {
         width: calc(66.66% - 1.5rem);
-    }
-
-    .arch .arch-u-2of3-md:last-of-type {
         max-width: calc(66.66% - 1.5rem);
     }
 
     .arch .arch-u-1of4-md {
         width: calc(25% - 1.5rem);
-    }
-
-    .arch .arch-u-1of4-md:last-of-type, .arch .arch-u-1of4-md:nth-last-child(2),
-    .arch .arch-u-1of4-md:nth-last-child(3) {
         max-width: calc(25% - 1.5rem);
     }
 
     .arch .arch-u-3of4-md {
         width: calc(75% - 1.5rem);
+        max-width: calc(75% - 1.5rem);
     }
 
     .arch .arch-u-1of5-md {
         width: calc(20% - 1.5rem);
+        max-width: calc(20% - 1.5rem);
     }
 
     .arch .arch-u-2of5-md {
         width: calc(40% - 1.5rem);
+        max-width: calc(40% - 1.5rem);
     }
 
     .arch .arch-u-3of5-md {
         width: calc(60% - 1.5rem);
+        max-width: calc(60% - 1.5rem);
     }
 
     .arch .arch-u-4of5-md {
         width: calc(80% - 1.5rem);
+        max-width: calc(80% - 1.5rem);
     }
 
     .arch .arch-width-auto-md {
@@ -291,8 +201,8 @@ http://flickity.metafizzy.co
 .tab-header {
     display: inline-block;
     position: relative;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.02);
-    opacity: 0.9;
+    border-bottom: 2px solid rgba(0, 0, 0, .02);
+    opacity: .9;
     cursor: pointer;
     vertical-align: middle;
     text-decoration: none;
@@ -311,10 +221,10 @@ http://flickity.metafizzy.co
     bottom: -2px;
     left: 50%;
     height: 3px;
-    opacity: 0.2;
+    opacity: .2;
     background: currentColor;
     content: "";
-    transition: left, right 0.3s;
+    transition: left, right .3s;
 }
 
 .tab-header.is-active {
@@ -327,7 +237,7 @@ http://flickity.metafizzy.co
 }
 
 .tab-header.is-active:before {
-    opacity: 0.7;
+    opacity: .7;
 }
 
 /*  Toggles */
@@ -335,7 +245,7 @@ http://flickity.metafizzy.co
 .collapse-toggle {
     display: none;
     visibility: hidden;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 .js-houdini .collapse-toggle {
@@ -356,8 +266,8 @@ http://flickity.metafizzy.co
 .chevron-toggle {
     width: 1em;
     height: 1em;
-    opacity: 0.5;
-    transition: all 0.3s;
+    opacity: .5;
+    transition: all .3s;
 }
 
 a:hover > .chevron-toggle {
@@ -373,7 +283,7 @@ a:hover > .chevron-toggle {
     overflow: hidden;
     height: 100%;
     max-height: 0;
-    transition: max-height 0.3s ease-out;
+    transition: max-height .3s ease-out;
 }
 
 .js-houdini .collapse.active {
@@ -381,8 +291,8 @@ a:hover > .chevron-toggle {
 }
 
 .js-houdini .collapse-wrap {
-    opacity: 0.5;
-    transition: all 0.1s;
+    opacity: .5;
+    transition: all .1s;
 }
 
 .js-houdini .collapse:not(.active) .collapse-wrap {
@@ -393,7 +303,7 @@ a:hover > .chevron-toggle {
 
 .js-houdini .active > .collapse-wrap {
     height: auto;
-    opacity: 0.9;
+    opacity: .9;
 }
 
 .arch .arch-p2 {
@@ -406,12 +316,12 @@ a:hover > .chevron-toggle {
 }
 
 .arch .arch-py1 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .arch .arch-pt1 {
-    padding-top: 0.5rem;
+    padding-top: .5rem;
 }
 
 .arch .arch-pb3 {
@@ -462,23 +372,30 @@ a:hover > .chevron-toggle {
     bottom: 2rem;
     color: #fff;
     position: absolute;
+    white-space: initial;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .cta-text {
     z-index: 1;
-    max-width: 60%;
-}
-
-.gallery-cell {
-    height: auto;
+    max-width: 80%;
 }
 
 .arch-grad-overlay:after {
-    background: linear-gradient(rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(rgba(0, 0, 0, .1) 40%, rgba(0, 0, 0, .6) 100%);
     content: "";
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.arch .flag-body > header + * {
+    padding-top: 0;
+}
+
+.row-wide > * {
+    margin: 0;
 }
